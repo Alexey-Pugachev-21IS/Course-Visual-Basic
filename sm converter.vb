@@ -1,7 +1,7 @@
 Imports System
 Module Program
     Sub Main(args As String())
-        Console.WriteLine("Enter number of seconds:")
+        Console.WriteLine("Enter number of centimeters:")
         Dim sm, dm, ostatok, m, input As Decimal
         input = Console.ReadLine()
         m = input \ 100
