@@ -64,20 +64,10 @@ Module ConsoleGraphic
         Next
     End Sub
     Sub Pustcub(leftx As Byte, topy As Byte, width As Byte, height As Byte)
-        Console.SetCursorPosition(leftx, topy)
-        For i = 1 To width
-            Console.Write(brush)
-        Next
-        For j = 1 To height - 3
-            Console.SetCursorPosition(leftx, topy + j)
-            Console.Write(brush)
-            Console.SetCursorPosition(leftx + width - 1, topy + j)
-            Console.WriteLine(brush)
-        Next
-        Console.SetCursorPosition(leftx, topy + height - 2)
-        For i = 1 To width
-            Console.Write(brush)
-        Next
+        Hline(leftx, topy, width)
+        Vline(leftx, topy, height)
+        Hline(leftx, topy + height - 1, width)
+        Vline(leftx + width - 1, topy, height)
     End Sub
     Sub cell(leftx As Byte, topy As Byte, width As Integer, Cells As Integer)
         Console.ForegroundColor = ConsoleColor.Cyan
